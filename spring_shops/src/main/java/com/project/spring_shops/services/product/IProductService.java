@@ -3,12 +3,14 @@ package com.project.spring_shops.services.product;
 import java.util.List;
 
 import com.project.spring_shops.model.Product;
+import com.project.spring_shops.requests.AddProductRequest;
+import com.project.spring_shops.requests.UpdateProductRequest;
 
 public interface IProductService {
-    Product addProduct(Product product);
+    Product addProduct(AddProductRequest request);
     Product getProductById(Long id);
     void deleteProductById(Long id);
-    void updateProduct(Product product, Long productId);
+    Product updateProduct(UpdateProductRequest request, Long productId);
     
     List<Product> getAllProducts();
 
